@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify Email</title>
+  <style>
+    * {
+      margin: 0;
+      color: #ffffff;
+    }
+
+    body{
+      font-family: sans-serif;
+    }
+
+    table {
+      border-spacing: 0;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    img{
+      border: 0;
+    }
+
+    h1{
+      line-height: 110%;
+    }
+
+    p{
+      line-height: 150%;
+    }
+
+    .main{
+      background: #121212;
+    }
+
+    .content{
+      background: #282828;
+      padding: 20px;
+    }
+
+    .logo{
+      padding: 10px 20px;
+    }
+
+    .logo img{
+      width: 100%;
+      max-width: 125px;
+    }
+
+    .heading, .phrase{
+      padding: 15px 0;
+    }
+
+    .heading h1{
+      font-size: 1.75rem;
+    }
+
+    .phrase p{
+      font-size: .9rem;
+    }
+
+    .btn{
+      padding: 30px 0;
+      border-bottom: 1px solid #3f3f3f;
+    }
+
+    .btn a{
+      text-decoration: none;
+      background: #ef3340;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    
+    .footer{
+      padding: 20px 0 0;
+    }
+
+    .footer p{
+      font-size: .85rem;
+      color: #8b8b8b;
+    }
+
+    .border{
+      height: 5px;
+      background: #ef3340;
+    }
+
+
+  </style>
+</head>
+  <body>
+    <center class="wrapper">
+      <table class="main">
+        <tr>
+          <td class="border"></td>
+        </tr>
+
+
+        <tr>
+          <table class="content">
+
+            <tr>
+              <td class="heading">
+                <h1>Your OTP is:</h1>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="phrase">
+                <p>{{otp}}</p>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="footer">
+                <p>
+                  This link will expire in 5 days. If you did not make this request, please disregard this email.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </tr>
+
+        
+
+      </table>
+    </center>
+  </body>
+</body>
+</html>
