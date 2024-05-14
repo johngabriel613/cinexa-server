@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import { router } from './routes/router.js';
 import { db } from './config/db.js';
-const PORT = env.PORT || 8080;
+const PORT = 8080;
 
 const app = express();
 
