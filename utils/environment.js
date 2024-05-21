@@ -11,4 +11,5 @@ export default {
   secure: process.env.NODEMAILER_SECURE,
   email: process.env.NODEMAILER_EMAIL,
   pass: process.env.NODEMAILER_PASS,
+  tmdb_bearer: process.env.TMDB_TOKEN
 };

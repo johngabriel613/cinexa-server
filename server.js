@@ -20,6 +20,6 @@ app.use(cookieParser());
 
 app.use('/api',router)
 
-app.listen(PORT, () => console.log(`server running on PORT ${PORT}`));
+app.listen(PORT, '192.168.56.190')
 
 db();
