@@ -46,8 +46,8 @@ export const signup = async(req, res) => {
   try {
     const {username, email, password} = req.body
 
-    const isUsernameTaken = await User.findOne({username: username});
-    const isEmailTaken = await User.findOne({email: email});
+    const isUsernameTaken = await User.findOne({username: username, verified: true});
+    const isEmailTaken = await User.findOne({email: email, verified: true});
 
     if(isUsernameTaken) return res.json({
       success: false,

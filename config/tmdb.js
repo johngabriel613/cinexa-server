@@ -1,4 +1,4 @@
-import { tmdb } from "./axios"
+import { tmdb } from "./axios.js";
 
 export const tmdbEndpoints = {
   mediaList : (mediaType, mediaCategory, query) => {

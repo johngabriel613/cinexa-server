@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import env from '../utils/environment';
+import env from '../utils/environment.js';
 
 export const tmdb = Axios.create({
   baseURL: "https://api.themoviedb.org/3",
