@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { signin, signup, verify } from "../controller/user.controller.js";
-import { getMediaDetails, getMediaList } from "../controller/tmdb.controller.js";
+import { getMovies, getPopular, getRecentEpisodes, getTopAiring } from "../controller/media.controller.js";
 
 export const router = Router();
 
@@ -14,5 +14,7 @@ router.post('/signin', signin)
 router.post('/signup', signup)
 router.post('/verify', verify)
 
-router.get('/:mediaType/:mediaCategory', getMediaList)
-router.get('/:mediaType/:mediaId', getMediaDetails)
+router.get('/popular', getPopular)
+router.get('/top-airing', getTopAiring)
+router.get('/movies', getMovies)
+router.get('/recent-episodes', getRecentEpisodes)

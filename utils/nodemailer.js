@@ -27,7 +27,7 @@ export const sendMail = async(email, otp) => {
   
   
   const mailOptions = {
-    from: `"CINEXA" <${env.email}>`,
+    from: `"ANIMAX" <${env.email}>`,
     to: email,
     subject: "OTP VERIFICATION",
     template: "verify",
