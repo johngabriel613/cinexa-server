@@ -21,8 +21,8 @@ app.use(cookieParser());
 app.use('/api',router)
 
 /*
-app.listen(PORT, () => `server running`)
-*/
-
 app.listen(PORT, '192.168.56.190')
+*/
+app.listen(PORT, () => `server running`)
+
 db();
