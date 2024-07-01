@@ -2,7 +2,7 @@ import Axios from 'axios';
 import env from '../utils/environment.js';
 
 export const media = Axios.create({
-  baseURL: "https://consumet-gules-chi.vercel.app/anime/gogoanime",
+  baseURL: "https://animax-lilac.vercel.app/anime",
   headers:{
     "Content-Type": "application/json"
   }
