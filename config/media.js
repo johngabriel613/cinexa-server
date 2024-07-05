@@ -4,16 +4,22 @@ export const endpoints = {
   home: () => {
     return media.get('/home')
   },
-  mediaInfo: (mediaId, query) => {
-    return media.get(`/info?id=${mediaId}`, query)
+  mediaInfo: ( params ) => {
+    return media.get("/info", {params})
   },
-  mediaEpisodes: (mediaId, query) => {
-    return media.get(`/episodes/${mediaId}`, query)
+  mediaEpisodes: ( mediaId, params ) => {
+    return media.get(`/episodes/${mediaId}`, {params})
   },
-  mediaEpisodeServers: (episodeId, query) => {
-    return media.get(`/servers?episodeId=${episodeId}`, query)
+  mediaEpisodeServers: ( params ) => {
+    return media.get("/servers", {params})
   },
-  mediaEpisodesSRC: (episodeId, query) => {
-    return media.get(`/episode-srcs?id=${episodeId}`, query)
+  mediaEpisodesSRC: ( params ) => {
+    return media.get("/episode-srcs", {params});
   },
+  mediaSearch: (params) => {
+    return media.get("/search", {params})
+  },
+  mediaSearchSuggestions: (params) => {
+    return media.get("/search/suggest", {params})
+  }
 }

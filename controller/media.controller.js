@@ -45,7 +45,7 @@ export const getMedia = async(req, res) => {
 
 export const getMediaInfo = (req, res) => {
   const { mediaId } = req.query;
-  return handleResponse(res, () => endpoints.mediaInfo(mediaId));
+  return handleResponse(res, () => endpoints.mediaInfo({id: mediaId}));
 };
 
 export const getMediaEpisodes = (req, res) => {
@@ -55,10 +55,15 @@ export const getMediaEpisodes = (req, res) => {
 
 export const getMediaEpisodeServers = (req, res) => {
   const { episodeId } = req.query;
-  return handleResponse(res, () => endpoints.mediaEpisodeServers(episodeId));
+  return handleResponse(res, () => endpoints.mediaEpisodeServers({episodeId}));
 }
 
 export const getMediaEpisodeSRC = (req, res) => {
-  const { episodeId } = req.query;
-  return handleResponse(res, () => endpoints.mediaEpisodesSRC(episodeId));
+  const { episodeId, category } = req.query;
+  return handleResponse(res, () => endpoints.mediaEpisodesSRC({id: episodeId, category}));
 };
+
+export const getMediaSearch = (req, res) => {
+  const {query, page} = req.query
+  return handleResponse(res, () => endpoints.mediaSearch({q: query, page}))
+}
